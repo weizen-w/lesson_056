@@ -12,9 +12,9 @@ public class Task1 {
     if (x < 0) {
       throw new IllegalArgumentException("Число не может быть отрицательным: " + x);
     }
-    if (x < 2) {
+    if (x < 10) {
       return String.valueOf(x);
     }
-    return x % 2 + reverse(x / 2);
+    return x % 10 + reverse(x / 10);
   }
 }
