@@ -9,12 +9,13 @@ public class Task1 {
   }
 
   public static String reverse(int x) {
+    final int radix = 10;
     if (x < 0) {
       throw new IllegalArgumentException("Число не может быть отрицательным: " + x);
     }
-    if (x < 10) {
+    if (x < radix) {
       return String.valueOf(x);
     }
-    return x % 10 + reverse(x / 10);
+    return x % radix + reverse(x / radix);
   }
 }
